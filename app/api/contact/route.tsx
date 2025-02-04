@@ -18,25 +18,6 @@ interface ValidationError {
 import { NextApiRequest, NextApiResponse } from "next";
 import { MongoClient } from "mongodb";
 
-// export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-//   try {
-//     const client: MongoClient = await connectDB();
-//     const db = client.db();
-
-//     // Validate collection name
-//     const collectionName = req.query.collection;
-//     if (!collectionName || typeof collectionName !== "string") {
-//       return res.status(400).json({ error: "Collection name is required and must be a string" });
-//     }
-
-//     const allData = await db.collection(collectionName).find({}).toArray();
-
-//     return res.status(200).json(allData);
-//   } catch (error) {
-//     console.error("Error fetching data:", error);
-//     return res.status(500).json({ error: "Internal Server Error" });
-//   }
-// }
 
 export async function GET(req: Request) {
     try {
